@@ -1,2 +1,2 @@
 # CYTableViewHandler
-A more light-weighted view controller is resulted from the Separation of tableview delegate and datasource.
+A more light-weighted view controller is resulted from the separation of tableview delegate and datasource.
