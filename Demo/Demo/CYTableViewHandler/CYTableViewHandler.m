@@ -68,7 +68,7 @@
     
 }
 
-
+#pragma mark - Public Method -
 - (id<CYViewData>)itemAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -80,10 +80,18 @@
 
 - (void)handleDatasourceAndDelegateForTableView:(UITableView *)tableView
 {
-    tableView.dataSource = self ;
-    tableView.delegate   = self ;
+    _tableView = tableView;
+    
+    tableView.dataSource = self;
+    tableView.delegate   = self;
 }
 
+- (void)reloadWithItem:(NSArray *)items {
+    
+    self.items = items;
+    
+    [_tableView reloadData];
+}
 #pragma mark - UITableViewDataSource -
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
