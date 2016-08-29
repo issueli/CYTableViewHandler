@@ -1,5 +1,5 @@
 //
-//  CYCellData.h
+//  CustomCellData.h
 //  Demo
 //
 //  Created by Yi Li on 16/8/29.
@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-@protocol CYCellData <NSObject>
+#import "CYCellData.h"
+@interface CustomCellData : NSObject <CYCellData>
 
 @property (nonatomic, copy) NSString *reuseID;
 @property (nonatomic, strong) id data;

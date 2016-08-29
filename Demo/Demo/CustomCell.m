@@ -14,7 +14,7 @@
 @end
 @implementation CustomCell
 
-- (void)configure:(UITableViewCell *)cell item:(id<CYViewData>)item indexPath:(NSIndexPath *)indexPath {
+- (void)configure:(UITableViewCell *)cell item:(id<CYCellData>)item indexPath:(NSIndexPath *)indexPath {
     
     if ([item.data isKindOfClass:[NSString class]]) {
         _label.text = item.data;

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		316B80D61D73E40D00B8D611 /* CustomCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = 316B80D51D73E40D00B8D611 /* CustomCellData.m */; };
+		316B80DB1D73E8C200B8D611 /* UITableViewCell+CYHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 316B80DA1D73E8C200B8D611 /* UITableViewCell+CYHandler.m */; };
 		E00D994C1CF45B1700224A32 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E00D994B1CF45B1700224A32 /* main.m */; };
 		E00D994F1CF45B1700224A32 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E00D994E1CF45B1700224A32 /* AppDelegate.m */; };
 		E00D99521CF45B1700224A32 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E00D99511CF45B1700224A32 /* ViewController.m */; };
@@ -16,8 +18,6 @@
 		E00D99651CF45B1700224A32 /* DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E00D99641CF45B1700224A32 /* DemoTests.m */; };
 		E00D99701CF45B1700224A32 /* DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E00D996F1CF45B1700224A32 /* DemoUITests.m */; };
 		E00D99801CF45B4F00224A32 /* CYTableViewHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E00D997F1CF45B4F00224A32 /* CYTableViewHandler.m */; };
-		E00D99831CF45B9A00224A32 /* UITableViewCell+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E00D99821CF45B9A00224A32 /* UITableViewCell+Extension.m */; };
-		E00D99861CF45BB200224A32 /* CYCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = E00D99851CF45BB200224A32 /* CYCellData.m */; };
 		E00D998B1CF45F7000224A32 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E00D998A1CF45F7000224A32 /* CustomCell.m */; };
 		E00D998D1CF461D700224A32 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E00D998C1CF461D700224A32 /* CustomCell.xib */; };
 /* End PBXBuildFile section */
@@ -40,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		316B80D41D73E40D00B8D611 /* CustomCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellData.h; sourceTree = "<group>"; };
+		316B80D51D73E40D00B8D611 /* CustomCellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellData.m; sourceTree = "<group>"; };
+		316B80D71D73E43E00B8D611 /* CYCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CYCellData.h; path = Demo/CYTableViewHandler/CYCellData.h; sourceTree = "<group>"; };
+		316B80D91D73E8C200B8D611 /* UITableViewCell+CYHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+CYHandler.h"; path = "Demo/CYTableViewHandler/UITableViewCell+CYHandler.h"; sourceTree = "<group>"; };
+		316B80DA1D73E8C200B8D611 /* UITableViewCell+CYHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+CYHandler.m"; path = "Demo/CYTableViewHandler/UITableViewCell+CYHandler.m"; sourceTree = "<group>"; };
 		E00D99471CF45B1700224A32 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E00D994B1CF45B1700224A32 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E00D994D1CF45B1700224A32 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,11 +63,6 @@
 		E00D99711CF45B1700224A32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E00D997E1CF45B4F00224A32 /* CYTableViewHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CYTableViewHandler.h; path = Demo/CYTableViewHandler/CYTableViewHandler.h; sourceTree = "<group>"; };
 		E00D997F1CF45B4F00224A32 /* CYTableViewHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CYTableViewHandler.m; path = Demo/CYTableViewHandler/CYTableViewHandler.m; sourceTree = "<group>"; };
-		E00D99811CF45B9A00224A32 /* UITableViewCell+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+Extension.h"; path = "Demo/CYTableViewHandler/UITableViewCell+Extension.h"; sourceTree = "<group>"; };
-		E00D99821CF45B9A00224A32 /* UITableViewCell+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+Extension.m"; path = "Demo/CYTableViewHandler/UITableViewCell+Extension.m"; sourceTree = "<group>"; };
-		E00D99841CF45BB200224A32 /* CYCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CYCellData.h; path = Demo/CYTableViewHandler/CYCellData.h; sourceTree = "<group>"; };
-		E00D99851CF45BB200224A32 /* CYCellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CYCellData.m; path = Demo/CYTableViewHandler/CYCellData.m; sourceTree = "<group>"; };
-		E00D99881CF45C5000224A32 /* CYViewDataProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CYViewDataProtocol.h; path = Demo/CYTableViewHandler/CYViewDataProtocol.h; sourceTree = "<group>"; };
 		E00D99891CF45F7000224A32 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		E00D998A1CF45F7000224A32 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		E00D998C1CF461D700224A32 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
@@ -121,6 +121,8 @@
 				E00D994E1CF45B1700224A32 /* AppDelegate.m */,
 				E00D99501CF45B1700224A32 /* ViewController.h */,
 				E00D99511CF45B1700224A32 /* ViewController.m */,
+				316B80D41D73E40D00B8D611 /* CustomCellData.h */,
+				316B80D51D73E40D00B8D611 /* CustomCellData.m */,
 				E00D99891CF45F7000224A32 /* CustomCell.h */,
 				E00D998A1CF45F7000224A32 /* CustomCell.m */,
 				E00D998C1CF461D700224A32 /* CustomCell.xib */,
@@ -162,13 +164,11 @@
 		E00D997D1CF45B2200224A32 /* CYTableViewHandler */ = {
 			isa = PBXGroup;
 			children = (
-				E00D99811CF45B9A00224A32 /* UITableViewCell+Extension.h */,
-				E00D99821CF45B9A00224A32 /* UITableViewCell+Extension.m */,
 				E00D997E1CF45B4F00224A32 /* CYTableViewHandler.h */,
 				E00D997F1CF45B4F00224A32 /* CYTableViewHandler.m */,
-				E00D99841CF45BB200224A32 /* CYCellData.h */,
-				E00D99851CF45BB200224A32 /* CYCellData.m */,
-				E00D99881CF45C5000224A32 /* CYViewDataProtocol.h */,
+				316B80D71D73E43E00B8D611 /* CYCellData.h */,
+				316B80D91D73E8C200B8D611 /* UITableViewCell+CYHandler.h */,
+				316B80DA1D73E8C200B8D611 /* UITableViewCell+CYHandler.m */,
 			);
 			name = CYTableViewHandler;
 			sourceTree = "<group>";
@@ -307,13 +307,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				316B80D61D73E40D00B8D611 /* CustomCellData.m in Sources */,
 				E00D99801CF45B4F00224A32 /* CYTableViewHandler.m in Sources */,
 				E00D99521CF45B1700224A32 /* ViewController.m in Sources */,
 				E00D994F1CF45B1700224A32 /* AppDelegate.m in Sources */,
-				E00D99831CF45B9A00224A32 /* UITableViewCell+Extension.m in Sources */,
+				316B80DB1D73E8C200B8D611 /* UITableViewCell+CYHandler.m in Sources */,
 				E00D998B1CF45F7000224A32 /* CustomCell.m in Sources */,
 				E00D994C1CF45B1700224A32 /* main.m in Sources */,
-				E00D99861CF45BB200224A32 /* CYCellData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

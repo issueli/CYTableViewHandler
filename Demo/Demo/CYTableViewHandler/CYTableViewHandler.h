@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CYViewDataProtocol.h"
-#import "UITableViewCell+Extension.h"
+#import "CYCellData.h"
+#import "UITableViewCell+CYHandler.h"
 
-typedef void    (^CellConfigureBlock)(NSIndexPath *indexPath, id<CYViewData> item, UITableViewCell *cell);
-typedef CGFloat (^CellHeightBlock)(NSIndexPath *indexPath, id<CYViewData> item);
-typedef void    (^CellDidSelectedBlock)(NSIndexPath *indexPath, id<CYViewData> item);
+typedef void    (^CellConfigureBlock)(NSIndexPath *indexPath, id<CYCellData> item, UITableViewCell *cell);
+typedef CGFloat (^CellHeightBlock)(NSIndexPath *indexPath, id<CYCellData> item);
+typedef void    (^CellDidSelectedBlock)(NSIndexPath *indexPath, id<CYCellData> item);
 
 // For Footer & Header
 typedef UIView* (^SectionViewBlock)(NSInteger section);
@@ -25,29 +25,24 @@ typedef CGFloat (^SectionViewHeightBlock)(NSInteger section);
  */
 @property (nonatomic, strong, readonly) UITableView *tableView;
 
+
+@property (nonatomic, copy) CellConfigureBlock     cellConfigure;
+@property (nonatomic, copy) CellHeightBlock        cellHeight;
+@property (nonatomic, copy) CellDidSelectedBlock   celldidSelect;
+
+@property (nonatomic, copy) SectionViewBlock        header;
+@property (nonatomic, copy) SectionViewHeightBlock  headerHeight;
+
+@property (nonatomic, copy) SectionViewBlock        footer;
+@property (nonatomic, copy) SectionViewHeightBlock  footerHeight;
+
+
 /**
  *  Init Method.
  *
  *  @param items            tableView Data.
- *  @param configureBlock   Cell Configure Block
- *  @param heightBlock      Cell Height Block
- *  @param didSelectedBlock Cell DidSelected Block
- *
- *  @return TableViewHandler
  */
-- (instancetype)initWithItems:(NSArray *)items
-           configureCellBlock:(CellConfigureBlock)configureBlock
-              cellHeightBlock:(CellHeightBlock)heightBlock
-               didSelectBlock:(CellDidSelectedBlock)didSelectedBlock;
-
-- (instancetype)initWithItems:(NSArray *)items
-           configureCellBlock:(CellConfigureBlock)configureBlock
-              cellHeightBlock:(CellHeightBlock)heightBlock
-               didSelectBlock:(CellDidSelectedBlock)didSelectedBlock
-                  headerBlock:(SectionViewBlock)headerBlock
-            headerHeightBlock:(SectionViewHeightBlock)headerHeightBlock
-                  footerBlock:(SectionViewBlock)footerBlock
-            footerHeightBlock:(SectionViewHeightBlock)footerHeightBlock;
+- (instancetype)initWithItems:(NSArray *)items;
 
 
 /**
@@ -64,7 +59,7 @@ typedef CGFloat (^SectionViewHeightBlock)(NSInteger section);
  *
  *  @return item.
  */
-- (id<CYViewData>)itemAtIndexPath:(NSIndexPath *)indexPath ;
+- (id<CYCellData>)itemAtIndexPath:(NSIndexPath *)indexPath ;
 
 /**
  *  Reload table view with new items.
@@ -72,4 +67,13 @@ typedef CGFloat (^SectionViewHeightBlock)(NSInteger section);
  *  @param items data arrays
  */
 - (void)reloadWithItem:(NSArray *)items;
+
+
+- (void)setCellConfigure:(CellConfigureBlock)cellConfigure;
+- (void)setCellHeight:(CellHeightBlock)cellHeight;
+- (void)setCelldidSelect:(CellDidSelectedBlock)celldidSelect;
+- (void)setHeader:(SectionViewBlock)header;
+- (void)setHeaderHeight:(SectionViewHeightBlock)headerHeight;
+- (void)setFooter:(SectionViewBlock)footer;
+- (void)setFooterHeight:(SectionViewHeightBlock)footerHeight;
 @end
