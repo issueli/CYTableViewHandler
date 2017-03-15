@@ -50,7 +50,7 @@ typedef CGFloat (^SectionViewHeightBlock)(NSInteger section);
  *
  *  @param tableView tableView
  */
-- (void)handleDatasourceAndDelegateForTableView:(UITableView *)tableView;
+- (void)handleTableView:(UITableView *)tableView;
 
 /**
  *  Item index in Items Array.

@@ -35,7 +35,7 @@
     return item;
 }
 
-- (void)handleDatasourceAndDelegateForTableView:(UITableView *)tableView {
+- (void)handleTableView:(UITableView *)tableView {
     _tableView = tableView;
     
     tableView.dataSource = self;

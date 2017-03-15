@@ -51,7 +51,7 @@
         [cell configure:cell item:item indexPath:indexPath];
     }];
 
-    [_tableViewHandler handleDatasourceAndDelegateForTableView:_tableView];
+    [_tableViewHandler handleTableView:_tableView];
     
 }
 
